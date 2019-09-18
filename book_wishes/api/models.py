@@ -9,5 +9,5 @@ class User(models.Model):
 class Book(models.Model):
 	title = models.CharField(max_length=100)
 	author = models.CharField(max_length=100)
-	isbn = models.CharField(max_length=13)
-	publication_date = models.DateField()
+	isbn = models.CharField(max_length=13, primary_key=True)
+	publication_date = models.DateField(null=True, blank=True)
